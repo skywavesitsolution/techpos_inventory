@@ -18,7 +18,7 @@ class categoryController extends Controller
         $request->validate([
             'name' => ['required'],
             'slug' => ['required'],
-            'metadata' => ['nullable'],
+            'metadata' => ['required'],
         ]);
 
         return category::create($request->validated());
@@ -34,7 +34,7 @@ class categoryController extends Controller
         $request->validate([
             'name' => ['required'],
             'slug' => ['required'],
-            'metadata' => ['nullable'],
+            'metadata' => ['required'],
         ]);
 
         $category->update($request->validated());

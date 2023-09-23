@@ -23,7 +23,13 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+Route::get('category',function (){
+    return view('category');
+});
+Route::get('products', function ()
+{
+   return view('product');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
